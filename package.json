@@ -1,0 +1,20 @@
+{
+  "name": "vusi-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "react": "cd client && parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "parcel": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
