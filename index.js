@@ -1,12 +1,28 @@
 const express = require('express');
 
 const app = express();
+const bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 app.use(express.static("./client/dist"));
+let name = "Andre";
 
 app.get('/api/one', function(req, res){
 	res.json({
-		name : "Andre",
+		name
+	});
+});
+
+app.post('/api/one', function(req, res){
+
+	name = req.body.name;
+	res.json({
+		name
 	});
 });
 
